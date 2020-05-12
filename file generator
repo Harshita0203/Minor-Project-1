@@ -1,0 +1,59 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int main()
+{
+   //char str[100]="moodiest";
+   //printf("enter a word\n");
+  // scanf("%s",str);
+   int i,l,l1,j,count=0,count1=0,y=0,y1=0,co=0,p=0,x=0,loop=0,i1,choice;
+   char s[100];char sub[100];
+   char word[100];char start;
+   char w[45];char s1[100];
+   
+   int f1[26]={0},f2[26]={0},f[26]={0};
+   //printf("enter a file\n");
+   //scanf("%s",s);
+   char c,d,e;char temppath[100]="";char ext[100]=".txt";
+   char path[100]="C:\\Users\\PRATYUSH\\Desktop\\FILES\\";
+   char path1[100]="C:\\Users\\PRATYUSH\\Desktop\\FILES\\";
+   FILE *fp,*fp1,*fp2,*fp3; 
+   fp = fopen("dict.txt", "r");
+   while (fscanf(fp, "%s", w) != EOF)// D WHILE
+        {
+        	y++;
+        	l=strlen(w);
+        	sprintf(s, "%d", l);
+        	start=w[0];
+        	if(start=='b'||start=='B')
+        	{
+			printf("%s\n",w);
+        	break;}
+        	if(start>=65&&start<=90||start>=97&&start<=122)
+        	{
+        		if(start>=97&&start<=122)
+        		start=start-32;
+        		sprintf(s1,"%c",start);
+        		printf("%s\n",s1);
+        		printf("%s\n",s);
+        		strcat(s1,s); 
+        		strcat(temppath,s1);
+        		strcat(temppath,ext);
+        		strcat(path,temppath);
+        		printf("path= %s\n",temppath);
+        	fp1 = fopen(path, "a");
+			fputs(w, fp1);
+			fputs("\n",fp1);	
+        		strcpy(path,path1);
+        		temppath[0]='\0';
+        		s1[0]='\0';
+        		s[0]='\0';
+        		
+        		
+			}
+        }
+        printf("%d",y);
+        return 0;
+        
+		}
+  

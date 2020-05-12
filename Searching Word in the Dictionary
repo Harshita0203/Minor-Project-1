@@ -1,0 +1,57 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int main()
+{
+   char str[100]="moodiest";
+   //printf("enter a word\n");
+  // scanf("%s",str);
+   int i,l=0,count=0,count1=0,y=0,y1=0,co=0,p=0;
+   char s[100];char sub[100];
+   char word[100];
+   char w[45],w1[45];
+   //printf("enter a file\n");
+   //scanf("%s",s);
+   char c,d,e;
+
+   FILE *fp,*fp1 ;
+   //printf("%d",l);
+   fp = fopen("dict.txt", "r");
+ c=fgetc(fp);
+   printf("\n the given string to find is %s\n",str);
+   while (c != EOF)
+    {
+    if(c=='\n')
+{
+y=0;
+p++;
+w[count]='\0';
+
+if(strcasecmp(w,str)==0){
+
+printf("the string %s is found at the position %d\n",str,p);
+printf("\n c wale if me ghusa hai\n");
+}
+else
+
+count=0;
+//printf("\n%s\n",w);
+memset(&w[0], 0, sizeof(w));
+// for(i=0;i<10;i++)
+// {
+// w[i]='\0';
+// }
+
+}
+else
+{
+w[y]=c;
+y++;count++;
+}
+        c = fgetc(fp);
+   
+   
+    }  
+    fclose(fp) ;
+return 0;
+}
