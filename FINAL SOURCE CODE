@@ -8,7 +8,7 @@ void grammar();
 void token();
 int main()
 {
-	printf("WELCOME TO 'U TYPE WE SUGGEST'\n");
+	printf("WELCOME TO 'U TYPE V SUGGEST'\n");
 	printf("YOU HAVE THE OPTIONS TO CHECK YOUR ENGLISH PIECE FOR SPELLING MISTAKES, BASIC GRAMMAR MISTAKES AND WORD TOKEN/COUNT\n");
 	printf("\n");
 	printf("\n");
